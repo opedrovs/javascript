@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="imagens/Iconsmind-Outline-Information.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Bem-Vindo</h1>
+        <p>Seja bem-vindo ao nosso site!</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Notícias</a>
+        <a href="#">Novidades</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main>
+        <article>
+            <h1>Nossa Empresa</h1>
+            <p>Nossa empresa oferece os melhores recursos possíveis, produtos, notícias e novidades, rápido, atualizado e de qualidade! Então, caso você use nosso site, você pode se <a href="#">cadastrar</a> de <strong>graça</strong>, ou nos <a href="#">doar</a> qualquer quantia que se sinta confortavel para nos ajudar.</p>
+        </article>
+
+        <img src="imagens/empresa.jpg" alt="busines-image" class="empresarios">
+
+        <article>
+            <h2>Nosso Objetivo</h2>
+            <p>Temos como objetivo, atualizar pessoas com nossas notícias e novidades de qualidade, e proteger de fake news, o mesmo acontece com nossos produtos, então, para publicarmos qualquer notícia, sempre olhamos as fontes, e são analisadas por nossos funcionários.</p>
+        </article>
+
+        <article>
+            <h2>Anúncios e Produtos de Nosso Site</h2>
+            <p>Colocamos anúncios, porque precisamos pagar nossos funcionários e manter o site funcionando corretamente. Os produtos, que são pratocianos por nós é a mesma coisa que os dos Anúncios.</p>
+        </article>
+
+        <article>
+            <h2>Porque ver Nossas Notícias?</h2>
+            <p>Como já dizemos acima, nossos funcionários sempre verificam as notícias e suas fontes antes de publica-las, para evitar o máximo possível de dar notícias <strong>FALSAS</strong> a nossos usuários.</p>
+        </article>
+
+        <img src="imagens/email.jpg" alt="email-image" class="email">
+
+        <article>
+            <h2>Porque se Cadastrar?</h2>
+            <p>Se cadastrando, você receberá inúmeros benefícios, como receber notícias de qualidades mais rapidamente por e-mail. Para se cadastrar é rapido, facil e de <strong>GRAÇA</strong>. Basta apenas clicar no botão "Cadastrar-se", e inserir os dados solicitados (e-mail, nome e website). E esses dados do cadastro são mantidos com <strong>Segurança</strong> e <strong>Privacidade</strong></p>
+
+            <input type="button" value="Cadastrar-se" class="cadastro">
+
+        </article>
+    </main>
+
+    <footer>
+        <p>Criador por <a href="#">admin</a> / &copy 2021 - 2021</p>
+    </footer>
+
+    <script>
+        let cadastro = window.document.getElementsByClassName('cadastro')[0]
+        cadastro.addEventListener('click', clicar)
+
+        function clicar() {
+            let nome = window.prompt(`Seu nome:`)
+            let email = window.prompt(`Seu e-mail: `)
+            let website = window.prompt(`Seu website: `)
+            window.confirm(`Olá, ${nome}. Obrigado por se cadastrar em nosso site!`)
+        }
+    </script>
+</body>
+</html>

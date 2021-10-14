@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: #4d6aec;
+            font: normal 18px Arial, Helvetica, Verdana, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+
+        /*var d = window.document.getElementsByTagName('div')[0]
+        d.style.background = 'purple'*/
+
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'*/
+
+        /*var d = window.document.getElementsByName('msg')[0]
+        d.style.color = 'red'*/
+
+        /*var d = window.document.getElementsByClassName('msg')[0]
+        d.style.color = 'blue'
+        d.innerHTML = 'Olá!'*/
+
+        /*var d = window.document.querySelector('div.msg')
+        d.style.color = 'blue'
+        d.innerHTML = 'Olá'
+        
+        ou
+
+        /*var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+        d.innerHTML = 'Olá'*/
+    </script>
+</body>
+</html>
