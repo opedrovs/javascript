@@ -1,0 +1,5 @@
+var c = 5
+while (c <= 15) {
+    console.log(`Passo ${c}`)
+    c = + c
+}
