@@ -6,7 +6,7 @@ function contar() {
     let fim = Number(tfim.value)
     let passo = Number(tpasso.value)
     let res = window.document.getElementsByClassName('res')[0]
-    if (fim == 0 || tinicio.value.length == 0) {
+    if (tfim.value.length == 0 || tinicio.value.length == 0) {
         res.innerHTML = '<p>Impossível contar!</p>'
     } else if (passo == 0) {
         window.alert('Passo inválido! Considerando PASSO 1')
