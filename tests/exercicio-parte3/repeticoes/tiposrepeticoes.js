@@ -1,5 +1,7 @@
-var c = 12
-while (1 < c) {
-console.log += `${c}`
-c++
+var c = 25
+while (c > 5) {
+    console.log(c)
+    c--
 }
+
+/*for*/

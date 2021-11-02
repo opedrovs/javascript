@@ -1,5 +1,0 @@
-var c = 0
-while (c <= 15) {
-    console.log(`Passo ${c}`)
-    c += c
-}

@@ -1,5 +1,0 @@
-var c = 50
-while (c >= 15) {
-    console.log(`Passo ${c}`)
-    c++
-}

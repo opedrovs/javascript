@@ -1,5 +1,5 @@
-var vel = 65
-console.log(`A sua velocidade atual é de ${vel} Km/h.`)
+var vel = 76
+console.log(`Sua velocidade é de ${vel} Km/h.`)
 if (vel > 60) {
     console.log(`Você foi MULTADO por excesso de velocidade!`)
 }

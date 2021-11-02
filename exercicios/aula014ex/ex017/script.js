@@ -1,9 +1,8 @@
-function criar() {
-    var tnum = window.document.getElementById('txtnum')
-    var num = Number(tnum.value)
-    var res = window.document.querySelector('div.res')
+function gerar() {
+    var num = window.Number(document.getElementById('txtnum').value)
+    var res = window.document.getElementsByClassName('res')[0]
     if (num == 0) {
-        window.alert('Por favor, digite um número!')
+        window.alert('Por favor, coloque um número!')
     } else {
         res.innerHTML = `<p>${num} x 1 = ${num*1}</p>`
         res.innerHTML += `<p>${num} x 2 = ${num*2}</p>`
