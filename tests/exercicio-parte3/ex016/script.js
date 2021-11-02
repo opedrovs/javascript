@@ -1,4 +1,4 @@
-function clicar() {
+function contar() {
     var inicio = window.Number(document.getElementById('txtinicio').value)
     var fim = window.Number(document.getElementById('txtfim').value)
     var passo = window.Number(document.getElementById('txtpasso').value)
@@ -6,35 +6,35 @@ function clicar() {
     if (passo == 0) {
         window.alert('Passo inválido! Considerando PASSO 1')
         if (inicio < fim) {
-            var c = inicio
             res.innerHTML = '<p>Contando:</p>'
+            var c = inicio
             while (c < fim) {
                 res.innerHTML += `${c} &#x1F449`
                 c++
             }
             res.innerHTML += '&#x1F3C1'
         } else if (inicio > fim) {
-            var c = inicio
             res.innerHTML = '<p>Contando:</p>'
-            while (c >= fim)  {
+            var c = inicio
+            while (c >= fim) {
                 res.innerHTML += `${c} &#x1F449`
                 c--
             }
             res.innerHTML += '&#x1F3C1'
         }
-    } else if (fim == 0 || inicio == length) {
-        res.innerHTML = 'Impossível contar!'
+    } else if (fim == 0) {
+        res.innerHTML = '<p>Impossível contar!</p>'
     } else if (inicio < fim) {
-        var c = inicio
         res.innerHTML = '<p>Contando:</p>'
+        var c = inicio
         while (c < fim) {
             res.innerHTML += `${c} &#x1F449`
             c+=passo
         }
         res.innerHTML += '&#x1F3C1'
     } else if (inicio > fim) {
-        var c = inicio
         res.innerHTML = '<p>Contando:</p>'
+        var c = inicio
         while (c >= fim) {
             res.innerHTML += `${c} &#x1F449`
             c-=passo
