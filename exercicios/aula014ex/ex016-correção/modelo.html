@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Super Contagem</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1>Vamos contar</h1>
     </header>
+
     <section>
         <div>
-            <p>Número:
-                <input type="number" name="txtnum" id="txtnum">
-                <input type="button" value="Gerar Tabuada" onclick="gerar()">
-            </p>
+            <p>Início: <input type="number" name="inicio" id="txti"></p>
+            <p>Fim: <input type="number" name="fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div class="res">
-            <p>Digite um número acima</p>
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
+
     <footer>
         <p>&copy; CursoemVideo</p>
     </footer>

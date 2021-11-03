@@ -1,7 +1,8 @@
 function gerar() {
-    var num = window.Number(document.getElementById('txtnum').value)
+    var tnum = window.document.getElementById('txtnum')
+    var num = Number(tnum.value)
     var res = window.document.getElementsByClassName('res')[0]
-    if (num == 0) {
+    if (tnum.value.length == 0) {
         window.alert('Por favor, coloque um número!')
     } else {
         res.innerHTML = `<p>${num} x 1 = ${num*1}</p>`
