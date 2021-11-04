@@ -1,47 +1,32 @@
 function contar() {
-    let tinicio = window.document.getElementById('txtinicio')
-    let tfim = window.document.getElementById('txtfim')
-    let tpasso = window.document.getElementById('txtpasso')
-    let inicio = Number(tinicio.value)
-    let fim = Number(tfim.value)
-    let passo = Number(tpasso.value)
-    let res = window.document.getElementsByClassName('res')[0]
-    if (tfim.value.length == 0 || tinicio.value.length == 0) {
-        res.innerHTML = '<p>Impossível contar!</p>'
-    } else if (passo == 0) {
-        window.alert('Passo inválido! Considerando PASSO 1')
-        if (inicio < fim) {
-            res.innerHTML = '<p>Contando:</p>'
-            let c = inicio
-            while (c < fim) {
-                res.innerHTML += `${c} &#x1F449`
-                c++
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementsByClassName('res')[0]
+    
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        // window.aler('[ERRO] Faltam dados!')
+        res.innerHTML = `<p>Impossível contar</p>`
+    } else {
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        res.innerHTML = '<p>Contando:</p>'     
+        if (p <= 0) {
+            window.alert('Passo inválido! Considerando PASSO 1')
+            p = 1
+        }   
+        if (i < f) {
+            // Contagem crescente
+            for(let c = i;c <= f;c += p) {
+                res.innerHTML += ` ${c} \u{1F449}`
             }
-            res.innerHTML += '&#x1F3C1'
-        } else if (inicio > fim) {
-            res.innerHTML = '<p>Contando:</p>'
-            let c = inicio
-            while (c >= fim) {
-                res.innerHTML += `${c} &#x1F449`
-                c--
+        } else {
+            // Constagem regressiva
+            for(let c = i;c >= f;c -= p) {
+                res.innerHTML += ` ${c} \u{1F449}`
             }
-            res.innerHTML += '&#x1F3C1'
         }
-    } else if (inicio < fim) {
-        res.innerHTML = '<p>Contando:</p>'
-        let c = inicio
-        while (c < fim) {
-            res.innerHTML += `${c} &#x1F449`
-            c+=passo
-        }
-        res.innerHTML += '&#x1F3C1'
-    } else if (inicio > fim) {
-        res.innerHTML = '<p>Contando:</p>'
-        let c = inicio
-        while (c >= fim) {
-            res.innerHTML += `${c} &#x1F449`
-            c-=passo
-        }
-        res.innerHTML += '&#x1F3C1'
+        res.innerHTML += '\u{1F3C1}'
     }
 }

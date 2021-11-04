@@ -1,14 +1,14 @@
 function verificar() {
-    var data = new Date()
-    var ano = data.getFullYear()
-    var fano = window.document.getElementById('txtano')
-    var res = window.document.getElementsByClassName('res')[0]
+    let data = new Date()
+    let ano = data.getFullYear()
+    let fano = document.getElementById('txtano')
+    let res = document.getElementsByClassName('res')[0]
     if (fano.value.length == 0 || fano.value > ano) {
-        window.alert('[ERRO] Verifique os seus dados e tente novamente!')
+        window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
-        var fsex = window.document.getElementsByName('radsex')
-        var idade = ano - Number(fano.value)
-        var gênero = ''
+        let fsex = document.getElementsByName('radsex')
+        let idade = ano - Number(fano.value)
+        let gênero = ''
         var imagem = document.createElement('img')
         imagem.setAttribute('id', 'foto')
         if (fsex[0].checked) {
@@ -42,8 +42,8 @@ function verificar() {
                 imagem.setAttribute('src', 'imagens/foto-idoso-f.png')
             }
         }
-        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos.</p>`
         res.style.textAlign = 'center'
+        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos.</p>`
         res.appendChild(imagem)
     }
 }
