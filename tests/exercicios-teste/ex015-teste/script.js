@@ -4,15 +4,15 @@ function verificar() {
     let fano = window.document.getElementById('txtano')
     let res = window.document.getElementsByClassName('res')[0]
     if (fano.value.length == 0 || fano.value > ano) {
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
+        window.alert('[ERRO] Verifique os seus dados e tente novamente!')
     } else {
-        let fsex = window.document.getElementsByName('radsex')
+        let fsex = window.document.getElementById('radsex')
         let idade = ano - Number(fano.value)
         let gênero = ''
         let imagem = document.createElement('img')
         imagem.setAttribute('id', 'foto')
         if (fsex[0].checked) {
-            gênero = 'Homem'
+            gênero = 'Mulher'
             if (idade >= 0 && idade < 10) {
                 // Criança
                 imagem.setAttribute('src', 'imagens/foto-bebe-m.png')
@@ -38,7 +38,7 @@ function verificar() {
                 // Adulto
                 imagem.setAttribute('src', 'imagens/foto-adulto-f.png')
             } else {
-                // idoso
+                // Idoso
                 imagem.setAttribute('src', 'imagens/foto-idoso-f.png')
             }
         }
