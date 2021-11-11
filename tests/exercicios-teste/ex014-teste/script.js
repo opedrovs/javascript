@@ -1,5 +1,5 @@
 function carregar() {
-    let data = new Date()
+    let data = new Date
     let hora = data.getHours()
     let min = data.getMinutes()
     let msg = window.document.getElementsByClassName('msg')[0]
@@ -8,14 +8,14 @@ function carregar() {
     if (hora >= 0 && hora < 12) {
         // Boa Manhã
         imagem.src = 'fotomanha.png'
-        document.body.style.background = '#528fd0'
+        document.body.style.background = '#5793d1'
     } else if (hora <= 18) {
         // Boa Tarde
         imagem.src = 'fototarde.png'
-        document.body.style.background = '#d2954a'
+        document.body.style.background = '#d79c4e'
     } else {
         // Boa Noite
         imagem.src = 'fotonoite.png'
-        document.body.style.background = '#050f11'
+        document.body.style.background = '#061012'
     }
 }

@@ -105,15 +105,19 @@ main strong {
 
 main a {
     color: var(--cor5);
-    background-color: var(--cor1);
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    background-color: var(--cor1);
     padding: 0px 3px;
+}
+
+main a::after {
+    content: '\1F517';
 }
 
 main a:hover {
     color: var(--cor4);
-    text-decoration: underline;
+    border-bottom: 3px solid var(--cor4);
 }
 
 main img {

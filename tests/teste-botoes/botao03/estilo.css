@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+    color: white;
+    background-color: #548da7;
+    font: normal 16px Arial, Helvetica, Verdana, sans-serif;
+    text-align: center;
+}
+
+section {
+    padding: 40px;
+}
+
+div a { 
+    color: white;
+    border-radius: 20px;
+    background-color: #548da7; 
+    border: 1px solid #ffffff77; 
+    text-decoration: none;
+    padding: 12px 28px; 
+} 
+
+div a.reguest {
+    background-color: #50839b; 
+}
