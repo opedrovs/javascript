@@ -4,7 +4,7 @@ function verificar() {
     let fano = window.document.getElementById('txtano')
     let res = window.document.getElementsByClassName('res')[0]
     if (fano.value.length == 0 || fano.value > ano) {
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
+        window.alert('[ERRO] Verifique os seus dados e tente novamente!')
     } else {
         let fsex = window.document.getElementsByName('radsex')
         let idade = ano - Number(fano.value)
@@ -26,7 +26,7 @@ function verificar() {
                 // Idoso
                 imagem.setAttribute('src', 'imagens/foto-idoso-m.png')
             }
-        } else {
+        } else if (fsex[1].checked) {
             gênero = 'Mulher'
             if (idade >= 0 && idade < 10) {
                 // Criança

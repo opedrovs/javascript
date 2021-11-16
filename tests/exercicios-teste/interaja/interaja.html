@@ -7,36 +7,37 @@
     <title>Interaja</title>
     <style>
         body {
-            font:normal 20px Arial, Helvetica, Verdana, sans-serif;
+            font: normal 20px Arial, Helvetica, Verdana, sans-serif;
         }
         div {
             color: white;
             background-color: green;
             width: 200px;
             height: 200px;
-            text-align: center;
             line-height: 200px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="area">Interaja</div>
+    
     <script>
         let a = window.document.getElementsByClassName('area')[0]
         a.addEventListener('click', clicar)
         a.addEventListener('mouseenter', entrar)
         a.addEventListener('mouseout', sair)
-        
+
         function clicar() {
-            a.innerHTML = 'Clicou!'
             a.style.background = 'red'
+            a.innerHTML = 'Clicou!'
         }
         function entrar() {
             a.innerHTML = 'Entrou!'
         }
         function sair() {
-            a.innerHTML = 'Saiu!'
             a.style.background = 'green'
+            a.innerHTML = 'Saiu!'
         }
     </script>
 </body>
