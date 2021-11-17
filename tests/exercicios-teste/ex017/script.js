@@ -5,12 +5,14 @@ function tabuada() {
         window.alert('Por favor, digite um número!')
     } else {
         let num = Number(tnum.value)
+        let c = 1
         tab.innerHTML = ''
-        for(let c = 1;c <= 10;c++) {
+        while (c <= 10) {
             let item = document.createElement('option')
             item.text = `${num} x ${c} = ${num*c}`
             item.value = `tab${c}`
-            tab.appendChild(item)   
+            tab.appendChild(item)
+            c++
         }
     }
 }

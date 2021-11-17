@@ -9,7 +9,7 @@ function contar() {
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
-        res.innerHTML = 'Contando: <br>'
+        res.innerHTML = 'Contando:<br>'
         if (p == 0) {
             window.alert('Passo inválido! Considerando PASSO 1')
             p = 1
@@ -22,7 +22,7 @@ function contar() {
             for(let c = i;c >= f;c -= p) {
                 res.innerHTML += ` ${c} &#x1F449`
             }
-        }
-        res.innerHTML += '&#x1F3C1'
+        } 
+        res.innerHTML += `&#x1F3C1`
     }
 }
