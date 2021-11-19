@@ -1,18 +1,16 @@
 function tabuada() {
-    let tnum = window.document.getElementById('txtnum')
-    let tab = window.document.getElementById('seltab')
+    let tnum = window.document.querySelector('input#txtnum')
+    let tab = window.document.querySelector('select#seltab')
     if (tnum.value.length == 0) {
         window.alert('Por favor, digite um número!')
     } else {
+        tab.innerHTML = 0
         let num = Number(tnum.value)
-        let c = 1
-        tab.innerHTML = ''
-        while (c <= 10) {
+        for(let c = 1;c <= 10;c++) {
             let item = document.createElement('option')
             item.text = `${num} x ${c} = ${num*c}`
             item.value = `tab${c}`
             tab.appendChild(item)
-            c++
         }
     }
 }
