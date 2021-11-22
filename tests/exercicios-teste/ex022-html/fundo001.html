@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagem de Fundo</title>
+    <title>Imagens de Fundo</title>
     <style>
+        body {
+            background-image: url('imagens/wallpaper001.jpg');
+        }
+
         div.quadrado {
-            border: 1px solid black;
+            border: 2px solid black;
             border-radius: 10px;
-            width: 175px;
-            height: 175px;
+            width: 200px;
+            height: 200px;
             display: inline-block;
         }
-        
+
         div#q1 {
-            background-color: lightpink;
+            background-color: skyblue;
         }
-
         div#q2 {
-            background-image: linear-gradient(to bottom, lightgreen, green);
+            background-image: linear-gradient(to bottom, yellow, red);
         }
-
         div#q3 {
-            background-image: url('imagens/pattern001.png');
+            background-image: url('imagens/pattern002.png');
         }
     </style>
 </head>
@@ -31,13 +33,11 @@
     <div class="quadrado" id="q1">
 
     </div>
-
     <div class="quadrado" id="q2">
 
     </div>
-
     <div class="quadrado" id="q3">
 
-    </div>
+    </div> 
 </body>
 </html>
