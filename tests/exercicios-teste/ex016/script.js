@@ -1,15 +1,15 @@
 function contar() {
-    let ini = window.document.getElementById('txtini')
-    let fim = window.document.getElementById('txtfim')
+    let ini = window.document.querySelector('input#txtini')
+    let fim = window.document.querySelector('input#txtfim')
     let passo = window.document.getElementById('txtpasso')
-    let res = window.document.querySelector('div.res')
+    let res = window.document.getElementsByClassName('res')[0]
     if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        res.innerHTML = 'Impossível contar'
+        res.innerHTML = '<p>Impossível contar!</p>'
     } else {
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
-        res.innerHTML = 'Contando:<br>'
+        res.innerHTML = '<p>Contando:</p>'
         if (p == 0) {
             window.alert('Passo inválido! Considerando PASSO 1')
             p = 1

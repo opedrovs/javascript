@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        body {
+            font: normal 20px Arial, Helvetica, Verdana, sans-serif;
+        }
+        input.conversor {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <div>
+        <input type="button" value="Converter" class="conversor" onclick="converter()">
+    </div>
+    <div class="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        function converter() {
+            let dist = Number(window.prompt('Digite uma distância em metros (m)'))
+
+            let res = window.document.getElementsByClassName('res')[0]
+            res.innerHTML = `<h2>A distância de ${dist} metros, corresponde a...</h2>`
+            res.innerHTML += `${dist}`
+            res.innerHTML += `${dist}`
+        }
+    </script>
+</body>
+</html>
