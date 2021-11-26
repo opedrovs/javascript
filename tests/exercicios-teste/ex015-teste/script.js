@@ -10,7 +10,7 @@ function verificar() {
         let idade = ano - Number(fano.value)
         let gênero = ''
         let imagem = document.createElement('img')
-        // imagem.setAttribute('id', 'foto') -- > colocar o ID 'foto'
+        imagem.setAttribute('id', 'foto')
         if (fsex[0].checked) {
             gênero = 'Homem'
             if (idade >= 0 && idade < 10) {
@@ -42,7 +42,7 @@ function verificar() {
                 imagem.setAttribute('src', 'imagens/foto-idoso-f.png')
             }
         }
-        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos.</p>`
+        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos</p>`
         res.style.textAlign = 'center'
         res.appendChild(imagem)
     }

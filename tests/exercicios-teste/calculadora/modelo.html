@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número
+                <input type="number" name="txtn1" id="txtn1">
+                <input type="number" name="txtn2" id="txtn2">
+            </p>
+
+            <p>Tipo:
+                <input type="radio" name="tipo" id="soma" checked>
+                <label for="soma">Soma</label>
+                <input type="radio" name="tipo" id="sub">
+                <label for="sub">Subtração</label>
+                <input type="radio" name="tipo" id="mul">
+                <label for="mul">Multiplicação</label>
+                <input type="radio" name="tipo" id="divi">
+                <label for="divi">Divisão</label>
+
+                <p>
+                    <input type="button" value="Calcular" onclick="calcular()">
+                </p>
+            </p>
+        </div>
+        <div class="res">
+            <p>Preparando o calculo...</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
