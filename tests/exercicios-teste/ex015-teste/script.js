@@ -42,7 +42,7 @@ function verificar() {
                 imagem.setAttribute('src', 'imagens/foto-idoso-f.png')
             }
         }
-        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos</p>`
+        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos.</p>`
         res.style.textAlign = 'center'
         res.appendChild(imagem)
     }

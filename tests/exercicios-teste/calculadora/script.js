@@ -5,12 +5,12 @@ function calcular() {
     if (tn1.value.length == 0 || tn2.value.length == 0) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
-        let n1 = Number(tn1.value)
-        let n2 = Number(tn2.value)
         let tipo = window.document.getElementsByName('tipo')
         let tipoconta = ''
         let conta = ''
-        res.innerHTML = '<p>Calculo:</p>'
+        let n1 = Number(tn1.value)
+        let n2 = Number(tn2.value)
+        res.innerHTML = '<p>Calculando:</p>'
         if (tipo[0].checked) {
             tipoconta = 'soma'
             conta = n1 + n2
@@ -24,6 +24,6 @@ function calcular() {
             tipoconta = 'divisão'
             conta = n1 / n2
         }
-        res.innerHTML += `<p>A ${tipoconta} entre ${n1} e ${n2} é igual a <strong>${conta}</strong></p>`
+        res.innerHTML = `<p>A ${tipoconta} entre ${n1} e ${n2} é igual a <strong>${conta}</strong>.</p>`
     }
 }
