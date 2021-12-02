@@ -1,4 +1,4 @@
-let valores = [5, 2, 8, 4]
+let valores = [2, 8, 3, 4]
 valores[4] = 1
 valores.sort()
 console.log(valores)
@@ -13,7 +13,6 @@ for(let pos = 0; pos < valores.length; pos++) {
     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
 }
 */
-
 for(let pos in valores) {
     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
 }
