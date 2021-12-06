@@ -2,7 +2,7 @@ function contar() {
     let ini = window.document.getElementById('txtini')
     let fim = window.document.getElementById('txtfim')
     let passo = window.document.getElementById('txtpasso')
-    let res = window.document.getElementsByClassName('res')[0]
+    let res = window.document.querySelector('div.res')
     if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
         res.innerHTML = '<p>Impossível contar!</p>'
     } else {

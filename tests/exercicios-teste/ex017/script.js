@@ -1,6 +1,6 @@
 function tabuada() {
     let num = window.document.getElementById('txtnum')
-    let tab = window.document.querySelector('select#seltab')
+    let tab = window.document.getElementById('seltab')
     if (num.value.length == 0) {
         window.alert('Por favor, digite um número!')
     } else {
