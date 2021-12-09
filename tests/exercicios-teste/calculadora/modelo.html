@@ -13,29 +13,31 @@
     </header>
     <section>
         <div>
+            <p>
+                <input type="radio" name="tipo" id="soma" checked>
+                <label for="soma">Soma</label>
+                <input type="radio" name="tipo" id="sub">
+                <label for="sub">Subtração</label>
+                <input type="radio" name="tipo" id="mul">
+                <label for="mul">Multiplicação</label>
+                <input type="radio" name="tipo" id="divi">
+                <label for="divi">Divisão</label>
+            </p>
             <p>Número:
-                <input type="number" name="txtn1" id="txtn1"> +
+                <input type="number" name="txtn1" id="txtn1">
                 <input type="number" name="txtn2" id="txtn2">
-                <input type="button" value="Somar" onclick="somar()">
+            </p>
+            <p>
+                <input type="button" value="Calcular" onclick="calcular()" class="calc">
             </p>
         </div>
         <div class="res">
-
+            <p>Preparando o calculo</p>
         </div>
     </section>
     <footer>
         <p>&copy; CursoemVideo</p>
     </footer>
-    <script>
-        function somar() {
-            let tn1 = window.document.getElementById('txtn1')
-            let tn2 = window.document.getElementById('txtn2')
-            let n1 = Number(tn1.value)
-            let n2 = Number(tn2.value)
-            let res = window.document.getElementsByClassName('res')[0]
-            let s = n1 + n2
-            res.innerHTML = `<p>A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong></p>`
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

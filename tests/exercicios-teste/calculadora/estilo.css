@@ -20,6 +20,21 @@ section {
     margin: auto;
 }
 
+section input.calc {
+    background-color: white;
+    border: 1px solid #00000086;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+section input.calc:hover {
+    box-shadow: 3px 3px 8px #00000086;
+}
+
+section input.calc:active {
+    background-color: #bebebe;
+}
+
 footer {
     text-align: center;
     font: italic 16px Arial, Helvetica, Verdana, sans-serif;

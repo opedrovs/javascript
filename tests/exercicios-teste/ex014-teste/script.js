@@ -8,14 +8,14 @@ function carregar() {
     if (hora >= 0 && hora < 12) {
         // Boa Manhã
         imagem.src = 'fotomanha.png'
-        document.body.style.background = '#4d8bcc'
+        document.body.style.background = '#4b8acb'
     } else if (hora <= 18) {
         // Boa Tarde
         imagem.src = 'fototarde.png'
-        document.body.style.background = '#f5b539'
+        document.body.style.background = '#d79d52'
     } else {
         // Boa Noite
         imagem.src = 'fotonoite.png'
-        document.body.style.background = '#03080b'
+        document.body.style.background = '#04090c'
     }
 }

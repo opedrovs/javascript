@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu nome</title>
+    <style>
+        body {
+            background-color: #2e80fa;
+            color: white;
+            font: normal 16px Arial, Helvetica, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            color: black;
+            padding: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        div input {
+            background-color: white;
+            border: 1px solid #00000094;
+            border-radius: 5px;
+            padding: 15px 25px;
+        }
+
+        div input:hover {
+            box-shadow: 3px 3px 8px #00000073;
+        }
+
+        div input:active {
+            background-color: #80808096;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clique no Botão Abaixo</h1>
+    </header>
+    <section>
+        <div>
+            <input type="button" value="Começar" onclick="comec()">
+        </div>
+        <div class="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Admin</p>
+    </footer>
+
+    <script>
+        function comec() {
+            let nome = window.prompt('Qual é o seu nome?')
+            let res = window.document.querySelector('div.res')
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! Seu nome tem <strong>${nome.length}</strong> letras</p>`
+            res.innerHTML += `<p>Seu nome em maiúsculas, <strong>${nome.toUpperCase()}</strong></p>`
+            res.innerHTML += `<p>Seu nome em minúsculas, <strong>${nome.toLowerCase()}</strong></p>`
+        }
+    </script>
+</body>
+</html>

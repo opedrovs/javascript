@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição</title>
+    <title>Sistema de Votos</title>
     <style>
         body {
             color: white;
-            background-color: #357cff;
+            background-color: #3c6aff;
             font: normal 16px Arial, Helvetica, Verdana, sans-serif;
         }
 
@@ -17,12 +17,14 @@
         }
 
         section {
-            color: black;
             background-color: white;
+            padding: 10px;
+            color: black;
             border-radius: 10px;
-            padding: 8px;
+            max-width: 600px;
+            margin: auto;
         }
-        
+
         footer {
             text-align: center;
         }
@@ -30,12 +32,14 @@
 </head>
 <body>
     <header>
-        <h1>Inscrição</h1>
-        <p>Necessário ter +16 para essa inscrição.</p>
+        <h1>Sistemas de Votos</h1>
     </header>
     <section>
         <div>
-            <input type="button" value="Inscrever-se" onclick="inscrever()">
+            <p>Quantos anos você tem? 
+                <input type="number" name="txtidade" id="txtidade"> 
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
         <div class="res">
 
@@ -46,16 +50,16 @@
     </footer>
 
     <script>
-        function inscrever() {
-            let nome = window.prompt('Qual é o seu nome?')
-            let idade = window.prompt('Quantos anos você tem?')
+        function verificar() {
+            let idade = window.Number(document.getElementById('txtidade').value)
             let res = window.document.getElementsByClassName('res')[0]
-
-            if (idade <= 16) {
-                window.alert(`Lamento ${nome}, mas não foi possível se inscrever.`)
+            res.innerHTML = `<p>Você tem ${idade} anos.</p>`
+            if (idade >= 0 && idade < 16) {
+                res.innerHTML += '<p><strong>Não</strong> vota!</p>'
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML += '<p>Voto <strong>opcional</strong>!</p>'
             } else {
-                window.alert(`Sua inscrição foi um SUCESSO!`)
-                res.innerHTML = `<p>Seja bem vindo <strong>${nome}</strong>!</p>`
+                res.innerHTML += '<p>Voto <strong>obrigatório</strong>!</p>'
             }
         }
     </script>
