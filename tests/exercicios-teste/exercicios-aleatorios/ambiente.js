@@ -1,11 +1,12 @@
-let num = [6, 3, 5, 2]
+let num = [5, 3, 2, 8]
 num.push(1)
 num.sort()
 console.log(num)
+
 console.log(`O vetor tem ${num.length} posições`)
 console.log(`A primeira posição tem o valor ${num[0]}`)
 
-let pos = num.indexOf(5)
+let pos = num.indexOf(7)
 if (pos == -1) {
     console.log('O valor não foi encontrado!')
 } else {

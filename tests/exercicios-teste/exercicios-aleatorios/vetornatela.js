@@ -1,4 +1,4 @@
-let valores = [5, 3, 8, 2]
+let valores = [3, 5, 2, 7]
 valores[4] = 1
 valores.sort()
 console.log(valores)

@@ -8,8 +8,8 @@ function calcular() {
         let n1 = Number(tn1.value)
         let n2 = Number(tn2.value)
         let tipo = window.document.getElementsByName('tipo')
-        let conta = 0 // Usar "0" ou ''
-        let tipoconta = 0 // Usar "0" ou ''
+        let conta = 0
+        let tipoconta = ''
         res.innerHTML = '<p>Calculando:</p>'
         if (tipo[0].checked) {
             conta = n1 + n2
@@ -22,8 +22,8 @@ function calcular() {
             tipoconta = 'multiplicação'
         } else {
             conta = n1 / n2
-            tipoconta = 'divsão'
+            tipoconta = 'divisão'
         }
-        res.innerHTML += `<p>A ${tipoconta} entre ${n1} e ${n2} é igual a <strong>${conta}</strong></p>`
+        res.innerHTML = `<p>A ${tipoconta} entre ${n1} e ${n2} é igual a <strong>${conta}</strong></p>`
     }
 }

@@ -2,7 +2,7 @@ function contar() {
     let ini = window.document.getElementById('txtini')
     let fim = window.document.getElementById('txtfim')
     let passo = window.document.getElementById('txtpasso')
-    let res = window.document.querySelector('div.res')
+    let res = window.document.getElementsByClassName('res')[0]
     if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
         res.innerHTML = '<p>Impossível contar!</p>'
     } else {
@@ -16,11 +16,11 @@ function contar() {
         }
         if (i < f) {
             for(let c = i; c <= f; c += p) {
-                res.innerHTML += ` ${c} &#x1F449`
+                res.innerHTML += ` ${c} &#x1F448`
             }
         } else if (i > f) {
             for(let c = i; c >= f; c -= p) {
-                res.innerHTML += ` ${c} &#x1F449`
+                res.innerHTML += ` ${c} &#x1F448`
             }
         }
         res.innerHTML += '&#x1F3C1'
