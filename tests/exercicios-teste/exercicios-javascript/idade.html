@@ -4,62 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Votos</title>
-    <style>
-        body {
-            color: white;
-            background-color: #3c6aff;
-            font: normal 16px Arial, Helvetica, Verdana, sans-serif;
-        }
-
-        header {
-            text-align: center;
-        }
-
-        section {
-            background-color: white;
-            padding: 10px;
-            color: black;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        footer {
-            text-align: center;
-        }
-    </style>
+    <title>Sistema de Idade</title>
 </head>
 <body>
     <header>
-        <h1>Sistemas de Votos</h1>
+        <h1>Sistema de Idade</h1>
     </header>
     <section>
         <div>
-            <p>Quantos anos você tem? 
-                <input type="number" name="txtidade" id="txtidade"> 
-                <input type="button" value="Verificar" onclick="verificar()">
-            </p>
+            <p>Quantos anos você tem? <input type="number" name="txtidade" id="txtidade"> <input type="button" value="Verificar" onclick="verificar()"></p>
         </div>
         <div class="res">
 
         </div>
     </section>
-    <footer>
-        <p>&copy; Admin</p>
-    </footer>
-
     <script>
         function verificar() {
-            let idade = window.Number(document.getElementById('txtidade').value)
+            let tidade = window.document.getElementById('txtidade')
+            let idade = Number(tidade.value)
             let res = window.document.getElementsByClassName('res')[0]
-            res.innerHTML = `<p>Você tem ${idade} anos.</p>`
+
             if (idade >= 0 && idade < 16) {
-                res.innerHTML += '<p><strong>Não</strong> vota!</p>'
+                res.innerHTML = '<p><strong>Não</strong> vota!</p>'
             } else if (idade < 18 || idade > 65) {
-                res.innerHTML += '<p>Voto <strong>opcional</strong>!</p>'
+                res.innerHTML = '<p>Voto <strong>opcional</strong>!</p>'
             } else {
-                res.innerHTML += '<p>Voto <strong>obrigatório</strong>!</p>'
+                res.innerHTML = '<p>Voto <strong>obrigatório</strong>!</p>'
             }
         }
     </script>

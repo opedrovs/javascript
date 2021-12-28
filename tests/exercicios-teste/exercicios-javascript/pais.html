@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de País</title>
+    <title>Sistema de Nacionalidade</title>
+    <style>
+        body {
+            font: normal 20px Arial, Helvetica, Verdana, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Sistema de país</h1>
+        <h1>Sistema de Nacionalidade</h1>
     </header>
     <section>
         <div>
-            <p>Qual país você está morando? 
-                <input type="text" name="txtpais" id="txtpais">
-                <input type="button" value="Verificar" onclick="verificar()">
-            </p>
+            <p>Qual país você nasceu? <input type="text" name="txtpais" id="txtpais"> <input type="button" value="Verificar" onclick="verificar()"></p>
         </div>
         <div class="res">
 
         </div>
     </section>
-
+    
     <script>
         function verificar() {
             let tpais = window.document.getElementById('txtpais')
             let pais = String(tpais.value)
-            let res = window.document.getElementsByClassName('res')[0]
-            res.innerHTML = `<p>Morando no país <strong>${pais}</strong> você é</p>`
-            if (pais == 'Brasil') {
-                res.innerHTML += '<p><strong>Brasileiro</strong></p>'
+            let res = window.document.querySelector('div.res')
+
+            if (pais != 'Brasil') {
+                res.innerHTML = `<p>Nascendo no país <strong>${pais}</strong> você é <strong>Estrangeiro</strong>!</p>`
             } else {
-                res.innerHTML += '<p><strong>Estrangeiro</strong></p>'
+                res.innerHTML = `<p>Nascendo no país <strong>${pais}</strong> você é <strong>Brasileiro</strong>!</p>`
             }
         }
     </script>

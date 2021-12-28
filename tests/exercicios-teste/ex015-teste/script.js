@@ -2,7 +2,7 @@ function verificar() {
     let data = new Date()
     let ano = data.getFullYear()
     let fano = window.document.getElementById('txtano')
-    let res = window.document.querySelector('div.res')
+    let res = window.document.getElementsByClassName('res')[0]
     if (fano.value.length == 0 || fano.value > ano) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
@@ -42,7 +42,7 @@ function verificar() {
                 imagem.setAttribute('src', 'imagens/foto-idoso-f.png')
             }
         }
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
+        res.innerHTML = `<p>Detectamos ${gênero} com ${idade} anos.</p>`
         res.style.textAlign = 'center'
         res.appendChild(imagem)
     }

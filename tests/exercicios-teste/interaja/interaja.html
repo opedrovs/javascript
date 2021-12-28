@@ -9,6 +9,7 @@
         body {
             font: normal 20px Arial, Helvetica, Verdana, sans-serif;
         }
+
         div.area {
             background-color: green;
             color: white;
@@ -29,15 +30,17 @@
         a.addEventListener('mouseout', sair)
 
         function clicar() {
-            a.style.background = 'red'
             a.innerHTML = 'Clicou!'
+            a.style.background = 'red'
         }
+
         function entrar() {
             a.innerHTML = 'Entrou!'
         }
+
         function sair() {
-            a.style.background = 'green'
             a.innerHTML = 'Saiu!'
+            a.style.background = 'green'
         }
     </script>
 </body>

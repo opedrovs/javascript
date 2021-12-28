@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+
+:root {
+    --font-padrao: Arial, Helvetica, Verdana, sans-serif;
+    --font-bebas: 'Bebas Neue', cursive;
+    --font-comfortaa: 'Comfortaa', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--font-padrao);
+}
+
+header {
+    background-color: #2b7ce6;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-family: var(--font-bebas);
+    font-size: 3em;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover {
+    color: #b4d0f5;
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    font-family: var(--font-comfortaa);
+}
+
+section > p {
+    padding-bottom: 2em;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+section.imagem > p {
+    background-color: #0000009c;
+    display: inline-block;
+    padding: 8px;
+}
+
+section#img01 {
+    background: url('../imagens/background-image01.jpg') center center/cover no-repeat fixed;   
+}
+
+section#img02 {
+    background: url('../imagens/background-image02.jpg') center center/cover no-repeat fixed;
+}
+
+footer {
+    background-color: #2b7ce6;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}

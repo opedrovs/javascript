@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: gray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color:  rgb(41, 91, 255);
+    text-align: center;
+}
+
+header > h1 {
+    color: white;
+    padding-top: 50px;
+    font-family: var(--fonte2);
+    font-size: 3em;
+}
+
+header > p {
+    color: white;
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+}
+
+section > p {
+    font-family: var(--fonte3);
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    background-color: #00000094;
+    display: inline-block;
+    padding: 5px;
+}
+
+section#img01 {
+    background-image: url('../imagens/flores.jpg');
+    background-position: center center;
+}
+
+section#img02 {
+    background-image: url('../imagens/cartas.jpg');
+    background-position: center center;
+}
+
+footer {
+    background-color: rgb(41, 91, 255);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
