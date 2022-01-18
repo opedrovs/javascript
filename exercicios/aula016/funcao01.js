@@ -6,7 +6,11 @@ function parimp(n) {
     }
 }
 
-console.log(parimp(4))
+console.log(parimp(11))
 
-/*let res = parimp(4)
-console.log(res)*/
+/*
+
+let res = parimp(4)
+console.log(res)
+
+*/
