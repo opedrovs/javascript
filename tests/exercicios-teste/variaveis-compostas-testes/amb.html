@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Compostas</title>
+    <style>
+        body {
+            background-color: #469afa;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            padding: 10px;
+            min-width: 310px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        section select {
+            width: 140px;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Variáveis Compostas</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Número (de 1 a 100):
+                <input type="number" name="txtnum" id="txtnum">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+            </p>
+
+            <select name="tabela" id="tabela" size="6">
+
+            </select> <br>
+
+            <input type="button" value="Finalizar" onclick="finalizar()">
+        </div>
+        <div class="res">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; admin</p>
+    </footer>
+
+    <script src="amb.js"></script>
+</body>
+</html>

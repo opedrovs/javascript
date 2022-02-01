@@ -12,17 +12,17 @@ function contar() {
         res.innerHTML = '<p>Contando:</p>'
         if (p == 0) {
             window.alert('Passo inválido! Considerando PASSO 1')
-            p = 1
+            p =1
         }
         if (i < f) {
-            for(let c = i; c <= f; c += p) {
+            for (let c = i; c < f; c += p) {
                 res.innerHTML += ` ${c} &#x1F449`
             }
         } else if (i > f) {
-            for(let c = i; c >= f; c -= p) {
+            for (let c = i; c > f; c -= p) {
                 res.innerHTML += ` ${c} &#x1F449`
             }
         }
-        res.innerHTML += '&#x1F3C1'
+        res.innerHTML += `&#x1F3C1`
     }
 }

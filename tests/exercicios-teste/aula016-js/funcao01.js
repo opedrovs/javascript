@@ -1,14 +1,16 @@
-function parimp(n) {
+function parimper(n) {
     if (n%2 == 0) {
-        return 'Par'
+        return 'Par!'
     } else {
-        return 'Ímpar'
+        return 'Ímper!'
     }
 }
 
-console.log(parimp(2))
+console.log(parimper(11))
 
 /*
-let res = parimp(2)
+
+let res = parimper(11)
 console.log(res)
+
 */

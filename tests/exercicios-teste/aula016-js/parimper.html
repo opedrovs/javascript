@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ímper e Par</title>
+    <style>
+        body {
+            background-color: #269af8;
+            font: normal 16px Arial, Helvetica, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+        }
+
+        section {
+            background-color: white;
+            min-width: 310px;
+            max-width: 500px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 6px 6px 11px rgba(0, 0, 0, 0.178);
+        }
+
+        footer {
+            color: white;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ímper ou Par</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número:
+                <input type="number" name="txtnum" id="txtnum">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div class="res">
+            <p>Preparando o resultado...</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; admin</p>
+    </footer>
+
+    <script src="parimper.js"></script>
+</body>
+</html>

@@ -3,19 +3,17 @@ function carregar() {
     let hora = data.getHours()
     let min = data.getMinutes()
     let msg = window.document.querySelector('div.msg')
-    let imagem = window.document.getElementsByClassName('imagem')[0]
     msg.innerHTML = `<p>Agora são exatamente ${hora} horas e ${min} minutos.</p>`
+    let imagem = window.document.getElementsByClassName('imagem')[0]
+
     if (hora >= 0 && hora < 12) {
-        // Boa Manhã
         imagem.src = 'fotomanha.png'
-        document.body.style.background = '#4e8bcc'
+        document.body.style.background = '#508dce'
     } else if (hora <= 18) {
-        // Boa Tarde
         imagem.src = 'fototarde.png'
-        document.body.style.background = '#e3a04e'
+        document.body.style.background = '#dd9f4c'
     } else {
-        // Boa Noite
         imagem.src = 'fotonoite.png'
-        document.body.style.background = '#03080b'
+        document.body.style.background = '#05090c'
     }
 }
