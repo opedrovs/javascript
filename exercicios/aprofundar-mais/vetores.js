@@ -29,8 +29,13 @@ for (let valor of valores) {
 }
 */
 
-
-// Melhor Opção
+// Melhores Opções
+/*
 for (let [pos] of valores.entries()) {
     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
+}
+*/
+
+for (let [pos, valor] of valores.entries()) {
+    console.log(`A posição ${[pos]} tem o valor ${valor}`)
 }

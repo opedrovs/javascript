@@ -16,9 +16,3 @@ for(let pos = 0; pos < valores.length; pos++) {
     }
 }
 console.log(`O maior valor informado é: ${maior}`)
-
-let menor = 0
-for(let pos = 0; pos < valores.length; pos--) {
-    console.log(pos)
-}
-console.log(`O menor valor informado é: ${pos}`)
