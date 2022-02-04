@@ -6,7 +6,7 @@ function adicionar() {
     let num = Number(tnum.value)
     val.push(num)
     let tab = window.document.getElementById('tabela')
-    if (tnum.value.lenght == 0 || tnum.value < 1 || tnum.value > 100) {
+    if (tnum.value.lenght == 0 || tnum.value < 1 || tnum.value > 100 || val != val) {
         window.alert('Valor inválido ou já encontrado na lista')
     } else {
         let item = document.createElement('option')
@@ -18,20 +18,25 @@ function adicionar() {
 function finalizar() {
     let num = Number(tnum.value)
 
-    if (tnum.value.length == 0 || tnum.value < 1 || tnum.value > 100) {
+    if (val.length == 0) {
         window.alert('Adicione valores antes de finalizar!')
     } else {
-        res.innerHTML = `<p>Ao todo, temos ${val.length} cadastrados.</p>`
-        //res.innerHTML += `<p>O maior valor informado foi ${val}.</p>`
-        //res.innerHTML += `<p>O menor valor informado foi ${val}.</p>`
+        res.innerHTML = `<p>Ao todo, temos ${val.length} números cadastrados.</p>`
         
-        function soma(n1, n2, n3, n4) {
-            let s = n1 + n2 + n3 + n4
-            return res.innerHTML += `Somando todos os valores, temos ${s}.`
-        }
+        let maior = Math.max.apply(null, val)
+        res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
 
-        soma.apply(null, val)
+        let menor = Math.min.apply(null, val)
+        res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+        
+        let total = val.reduce(function(total, valor) {
+            return total + valor
+        })
+        res.innerHTML += `<p>Somando todos os valores, temos ${total}.</p>`
 
-        //res.innerHTML += `A média dos valores digitados são ${val}`
+        let media = val.reduce(function(media, numero) {
+            return media + numero
+        })
+        res.innerHTML += `<p>A média dos valores digitados é ${media / Number(val.length)}.</p>`
     }
 }
