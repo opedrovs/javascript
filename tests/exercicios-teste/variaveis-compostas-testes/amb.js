@@ -2,7 +2,7 @@ let tnum = window.document.getElementById('txtnum')
 let val = []
 let res = window.document.querySelector('div.res')
 
-function adicionar() {  
+function adicionar() {
     let num = Number(tnum.value)
     val.push(num)
     let tab = window.document.getElementById('tabela')
@@ -12,6 +12,7 @@ function adicionar() {
         let item = document.createElement('option')
         item.text = `Valor ${num} adicionado.`
         tab.appendChild(item)
+        res.innerHTML = ''
     }
 }
 
