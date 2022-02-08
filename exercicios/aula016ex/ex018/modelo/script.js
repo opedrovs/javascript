@@ -1,6 +1,6 @@
 let tnum = window.document.getElementById('txtnum')
-let res = window.document.querySelector('div.res')
 let val = []
+let res = window.document.querySelector('div.res')
 
 function adicionar() {
     let num = Number(tnum.value)
