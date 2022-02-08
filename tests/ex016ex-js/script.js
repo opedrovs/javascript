@@ -1,5 +1,6 @@
 let tnum = window.document.getElementById('txtnum')
-let val = []
+const val = []
+
 let res = window.document.querySelector('div.res')
 
 function adicionar() {
@@ -10,10 +11,13 @@ function adicionar() {
         window.alert('Valor inválido ou já encontrado na lista.')
     } else {
         val.push(num)
+        const unicaVal = val.filter(function(ele, pos) {
+            return val.indexOf(ele) == pos;
+        })
         item.text = `Valor ${num} adicionado.`
         item.value = `Posição${val.length}`
         tab.appendChild(item)
-        res.innerHTML = ''
+        res.innerHTML = `${unicaVal}`
     }
 }
 
