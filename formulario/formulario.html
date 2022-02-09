@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Formulário</h1>
+        <p class="subtitulo">Preencha os dados abaixo</p>
+    </header>
+
+    <main>
+        <form>
+            <section>
+                <div class="campo">
+                    <label for="email">E-mail <span>*</span></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Repetir e-mail <span>*</span></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <h2>Dados Cadastrais</h2>
+
+                <div class="campo">
+                    <label for="nome">Nome <span>*</span></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="campo">
+                    <label for="sobrenome">Sobrenome <span>*</span></label>
+                    <input type="text" name="sobrenome" id=" sobrenome" required>
+                </div>
+                <div class="campo">
+                    <label for="sexo">Sexo <span>*</span></label>
+                    <select name="sexo" id="sexo" required>
+                        <option selected disabled value="">Selecionar</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="cpf">CPF <span>*</span></label>
+                    <input type="text" name="cpf" id="cpf" required>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone <span>*</span></label>
+                    <input type="tel" name="telefone" id="telefone" required>
+                </div>
+                <div class="campo">
+                    <label for="celular">Celular</label>
+                    <input type="text" name="celular" id="celular">
+                </div>
+            </section>
+
+            <section>
+                <div class="campo">
+                    <label for="senha">Crie uma senha <span>*</span></label required>
+                    <input type="password" name="senha" id="senha">
+                </div>
+                <div class="campo">
+                    <label for="senha">Repetir senha <span>*</span></label>
+                    <input type="password" name="senha" id="senha">
+                </div>
+
+                <h2>Endereço de entrega</h2>
+
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep">
+                </div>
+                <div class="campo">
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua" id="rua">
+                </div>
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input type="text" name="numero" id="numero"> <br>
+                    <input type="checkbox" name="sem" id="sem">Sem número
+                </div>
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro">
+                </div>
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado">
+                </div>
+                <div class="campo">
+                    <label for="pais">País</label>
+                    <input type="text" name="pais" id="pais">
+                </div>
+            </section>
+        </form>
+    </main>
+</body>
+</html>
