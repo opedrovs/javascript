@@ -20,6 +20,10 @@ section {
     margin: auto;
 }
 
+select#flista {
+    width: 150px;
+}
+
 footer {
     text-align: center;
     font: italic 16px Arial, Helvetica, Verdana, sans-serif;
