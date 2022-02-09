@@ -127,6 +127,36 @@ main img.pequeno {
     margin: auto;
 }
 
+main input {
+    padding: 7px;
+}
+
+main input.inscricao {
+    border: 1px solid rgb(160, 160, 160);
+    border-right: none;
+    border-radius: 3px 0px 0px 3px;
+    width: 230px;
+}
+
+main input.inscricao:focus {
+    background-color: rgb(221, 221, 221);
+}
+
+main input.botao {
+    color: var(--cor1);
+    padding: 8px;
+    border-radius: 0px 3px 3px 0px;
+    font-weight: bold;
+    background-color: var(--cor5);
+    border: none;
+    transition-duration: 0.5s;
+}
+
+main input.botao:hover {
+    color: var(--cor5);
+    background-color: var(--cor2);
+}
+
 div.video {
     position: relative;
     background-color: var(--cor5);

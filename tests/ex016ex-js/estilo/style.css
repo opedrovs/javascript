@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 body {
+    background-color: rgb(10, 175, 252);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(31, 128, 255);
 }
 
 header {
@@ -12,11 +12,11 @@ header {
 
 section {
     background-color: white;
-    padding: 10px;
-    border-radius: 10px;
     min-width: 310px;
     max-width: 500px;
     margin: auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 section select {
