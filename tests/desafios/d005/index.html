@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, Verdana, sans-serif;
+        }
+
+        input.botao {
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    
+    <input type="button" value="Converter" class="botao" onclick="converter()">
+    <p class="res">Clique no botão acima para iniciar.</p>
+
+    <script>
+        let res = window.document.querySelector('p.res')
+        function converter() {
+            let m = Number(window.prompt('Digite uma distáncia em metros (m)'))
+
+            let km = m / 1000
+            let hm = m / 100
+            let dam = m / 10
+            let dm = m * 10
+            let cm = m * 100
+            let mm = m * 1000
+            
+            res.innerHTML = `<h2>A distância de ${m} metros, corresponde a...</h2>`
+            res.innerHTML += `<p>${km} quilômetros (Km)</p>`
+            res.innerHTML += `<p>${hm} hectômetricos (Hm)</p>`
+            res.innerHTML += `<p>${dam} decâmetros (Dam)</p>`
+            res.innerHTML += `<p>${dm} decímetros (dm)</p>`
+            res.innerHTML += `<p>${cm} centímetros (cm)</p>`
+            res.innerHTML += `<p>${mm} milímetros (mm)</p>`
+            
+            /*
+            res.innerHTML += `<p>${km = m / 1000} quilômetros (Km)</p>`
+            res.innerHTML += `<p>${hm = m / 100} hectômetricos (Hm)</p>`
+            res.innerHTML += `<p>${dam = m / 10} decâmetros (Dam)</p>`
+            res.innerHTML += `<p>${dm = m * 10} decímetros (dm)</p>`
+            res.innerHTML += `<p>${cm = m * 100} centímetros (cm)</p>`
+            res.innerHTML += `<p>${mm = m * 1000} milímetros (mm)</p>`
+            */
+        }
+    </script>
+</body>
+</html>
