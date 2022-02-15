@@ -19,10 +19,12 @@
     <h1>Conversor de Medidas</h1>
     
     <input type="button" value="Converter" class="botao" onclick="converter()">
-    <p class="res">Clique no botão acima para iniciar.</p>
+    <div class="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
 
     <script>
-        let res = window.document.querySelector('p.res')
+        let res = window.document.querySelector('div.res')
         function converter() {
             let m = Number(window.prompt('Digite uma distáncia em metros (m)'))
 
