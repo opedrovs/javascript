@@ -2,35 +2,54 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de medidas</title>
+    <title>Conversor de Medidas</title>
     <style>
         body {
-            font: normal 20px Arial, Helvetica, Verdana, sans-serif;
+            font-family: Arial, Helvetica, Verdana, sans-serif;
         }
-        input.conversor {
-            padding: 15px;
+
+        input.botao {
+            height: 40px;
         }
     </style>
 </head>
 <body>
     <h1>Conversor de Medidas</h1>
-    <div>
-        <input type="button" value="Converter" class="conversor" onclick="converter()">
-    </div>
+    
+    <input type="button" value="Converter" class="botao" onclick="converter()">
     <div class="res">
         <p>Clique no botão acima para iniciar.</p>
     </div>
 
     <script>
+        let res = window.document.querySelector('div.res')
         function converter() {
-            let dist = Number(window.prompt('Digite uma distância em metros (m)'))
+            let m = Number(window.prompt('Digite uma distáncia em metros (m)'))
+            res.innerHTML = `<h2>A distância de ${m} metros, corresponde a...</h2>`
 
-            let res = window.document.getElementsByClassName('res')[0]
-            res.innerHTML = `<h2>A distância de ${dist} metros, corresponde a...</h2>`
-            res.innerHTML += `${dist}`
-            res.innerHTML += `${dist}`
+            let km = m / 1000
+            let hm = m / 100
+            let dam = m / 10
+            let dm = m * 10
+            let cm = m * 100
+            let mm = m * 1000
+            res.innerHTML += `<p>${km.toFixed(3)} quilômetros (Km)</p>`
+            res.innerHTML += `<p>${hm.toFixed(3)} hectômetricos (Hm)</p>`
+            res.innerHTML += `<p>${dam.toFixed(3)} decâmetros (Dam)</p>`
+            res.innerHTML += `<p>${dm.toFixed(1).replace('.', ',')} decímetros (dm)</p>`
+            res.innerHTML += `<p>${cm} centímetros (cm)</p>`
+            res.innerHTML += `<p>${mm} milímetros (mm)</p>`
+            
+            /*
+            res.innerHTML += `<p>${km = m / 1000} quilômetros (Km)</p>`
+            res.innerHTML += `<p>${hm = m / 100} hectômetricos (Hm)</p>`
+            res.innerHTML += `<p>${dam = m / 10} decâmetros (Dam)</p>`
+            res.innerHTML += `<p>${dm = m * 10} decímetros (dm)</p>`
+            res.innerHTML += `<p>${cm = m * 100} centímetros (cm)</p>`
+            res.innerHTML += `<p>${mm = m * 1000} milímetros (mm)</p>`
+            */
         }
     </script>
 </body>

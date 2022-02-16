@@ -11,7 +11,7 @@
         }
 
         input.botao {
-            height: 60px;
+            height: 40px;
         }
     </style>
 </head>
@@ -27,6 +27,7 @@
             let valorOferecido = Number(prompt(`Qual foi o valor você deu para pagar ${produto}?`))
             let troco = valorOferecido - preco
 
+            // Calcular Troco
             window.alert(`Você comprou ${produto} que custou ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.
 Deu ${valorOferecido.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de troco.
 Volte Sempre!`)
