@@ -43,7 +43,7 @@ function finalizar() {
         let soma = 0
         let media = 0
 
-        for(let pos in valores) {
+        for (let pos in valores) {
             (media += valores[pos])
             soma += valores[pos]
             if (valores[pos] > maior) {
