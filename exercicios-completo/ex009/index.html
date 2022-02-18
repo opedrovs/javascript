@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        .destaque {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Cliques</h1>
+
+    <input type="button" value="Clique em mim" id="contar"> <input type="button" value="Zerar o contador" id="zerar">
+
+    <div class="res">
+
+    </div>
+
+    <script>
+        let res = window.document.getElementsByClassName('res')[0]
+        let contador = window.document.getElementById('contar')
+        let zerarContador = window.document.getElementById('zerar')
+
+        // Contador
+        contador.addEventListener('click', contar)
+        let num = 1
+        let valor = 1
+        function contar() {
+            res.innerHTML = `<p>O contador está com <span class="destaque">${num}</span> cliques.</p>`
+            num += valor
+        }
+
+        // Zerar o Contador
+        zerarContador.addEventListener('click', zerar)
+        function zerar() {
+            res.innerHTML = ''
+            num = 1
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript externo</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript externo</h1>
+
+    <input type="button" value="Ação 1" id="acao1"> 
+    <input type="button" value="Ação 2" id="acao2"> 
+    <input type="button" value="Ação 3" id="acao3"> 
+    <input type="button" value="Ação 4" id="acao4">
+
+    <div class="res">
+        <p>Aqui vou registrar suas ações com os botões acima.</p>
+    </div>
+
+    <script>
+        let res = window.document.querySelector('div.res')
+        let regacao1 = window.document.getElementById('acao1')
+        let regacao2 = window.document.getElementById('acao2')
+        let regacao3 = window.document.getElementById('acao3')
+        let regacao4 = window.document.getElementById('acao4')
+
+        regacao1.addEventListener('click', acao1)
+        regacao2.addEventListener('click', acao2)
+        regacao3.addEventListener('click', acao3)
+        regacao4.addEventListener('click', acao4)
+
+        function acao1() {
+            res.innerHTML += '<p>Clicou no primeiro botão</p>'
+        }
+
+        function acao2() {
+            res.innerHTML += '<p>Clicou no segundo botão</p>'
+        }
+
+        function acao3() {
+            res.innerHTML += '<p>Clicou no terceiro botão</p>'
+        }
+
+        function acao4() {
+            res.innerHTML += '<p>Clicou no quarto botão</p>'
+        }
+    </script>
+</body>
+</html>

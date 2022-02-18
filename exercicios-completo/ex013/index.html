@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        .destaque {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maior valor</h1>
+    <input type="button" value="Clique para começar" onclick="maior()">
+    <div class="res">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+
+    <script>
+        let res = window.document.getElementsByClassName('res')[0]
+
+        function maior() {
+            let num1 = Number(window.prompt('Digite um número:'))
+            let num2 = Number(window.prompt('Digite outro número:'))
+            if (num1 > num2) {
+                res.innerHTML = `<p>Analisando os valores <span class="destaque">${num1}</span> e <span class="destaque">${num2}</span>, o maior valor é <strong>${num1}</strong></p>`
+            } else if (num1 < num2) {
+                res.innerHTML = `<p>Analisando os valores <span class="destaque">${num1}</span> e <span class="destaque">${num2}</span>, o maior valor é <strong>${num2}</strong></p>`
+            } else if (num1 == num2) {
+                res.innerHTML = `<p>Analisando os valores <span class="destaque">${num1}</span> e <span class="destaque">${num2}</span>, ambos são <strong>IGUAIS</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
