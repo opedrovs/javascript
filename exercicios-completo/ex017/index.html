@@ -22,8 +22,8 @@
 <body>
     <h1>Gerador de números</h1>
 
-    <input type="button" value="Clique em mim" id="gerador">
-    <input type="button" value="Limpar" id="limpador">
+    <input type="button" value="Clique em mim" onclick="gerar()">
+    <input type="button" value="Limpar" onclick="limpar()">
 
     <div class="res">
         <p>Cada vez que você apertar o botão acima, eu penso em um número entre 1 e 100.</p>
@@ -31,8 +31,17 @@
 
     <script>
         let res = window.document.getElementsByClassName('res')[0]
-        let gerar = window.document.getElementById('input#gerar')
-        let limpar = window.document.getElementById('input#limpar')
+        
+        function gerar() {
+            let min = 1
+            let max = 100
+            res.innerHTML += `<p>Acabei de pensar no número <span class="destaque">${Math.floor(Math.random() * (max - min) + min)}</span>!</p>`
+
+        }
+
+        function limpar() {
+            res.innerHTML = ''
+        }
     </script>
 </body>
 </html>

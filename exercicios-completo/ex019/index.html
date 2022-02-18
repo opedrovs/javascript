@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mútiplas ações</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplas ações</h1>
+    <input type="button" value="Clique para Iniciar" onclick="iniciar()">
+    <div class="res">
+        <p>Clique no botão acima para começar.</p>
+    </div>
+
+    <script>
+        let res = window.document.getElementsByClassName('res')[0]
+        function iniciar() {
+            res.innerHTML = `<h2>Calculando...</h2>`
+            let pri = Number(window.prompt('Primeiro valor'))
+            let seg = Number(window.prompt('Segundo valor:'))
+            let calc = window.prompt(`Valores informados: ${pri} e ${seg}.
+O que vamos fazer?
+[1] Somar
+[2] Subtrair
+[3] Multíplicar
+[4] Dividir`)
+            
+            if (calc == 1) {
+                res.innerHTML += `<p>${pri} + ${seg} = <strong>${pri+seg}</strong></p>`
+            } else if (calc == 2) {
+                res.innerHTML += `<p>${pri} - ${seg} = <strong>${pri-seg}</strong></p>`
+            } else if (calc == 3) {
+                res.innerHTML += `<p>${pri} x ${seg} = <strong>${pri*seg}</strong></p>`
+            } else if (calc == 4) {
+                res.innerHTML += `<p>${pri} / ${seg} = <strong>${pri/seg}</strong></p>`
+            } else {
+                res.innerHTML += `<p>OPÇÃO INVÁLIDA! Você digitou ${pri} e ${seg}, mas não sei o que fazer com eles.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

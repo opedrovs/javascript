@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo em JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        .esconder-botao {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tente adivinhar meu número</h1>
+    <input type="button" value="Tentar adivinhar" id="botao" onclick="adivinhar()">
+    <div class="res">
+        <p>Já pensei em um valor entre 1 e 100...</p>
+    </div>
+
+    <script>
+        let botao = window.document.getElementById('botao')
+        let res = window.document.getElementsByClassName('res')[0]
+        let min = 1
+        let max = 100
+        let numCorreto = Math.floor(Math.random() * (max - min) + min)
+        function adivinhar() {
+            let num = Number(window.prompt('Qual é o seu palpite?'))
+
+            if (num < numCorreto) {
+                res.innerHTML += `<p>Você falou ${num}. Meu número é <strong>MAIOR</strong>!</p>`
+            } else if (num > numCorreto) {
+                res.innerHTML += `<p>Você falou ${num}. Meu número é <strong>MENOR</strong>!</p>`
+            } else if (num == numCorreto) {
+                res.innerHTML += `<p><strong>PARABÉNS</strong>! Você acertou! Eu tinha dito o valor ${numCorreto}!</p>`
+                botao.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
