@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            padding: 3px;
+        }
+
+        input#botao {
+            background-color: green;
+            color: white;
+            padding: 6.8px;
+            border: 1px solid darkgreen;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Fatorial</h1>
+    <p>Escreva um número (entre 1 e 21) na caixa a seguir e te mostrarei o Fatorial dele.</p>
+    <p>Número:
+        <input type="text" name="num" id="num" placeholder="Número:">
+        <input type="button" value="Fatorial" id="botao" onclick="fatorial()">
+    </p>
+    <div id="res">
+        <p>Preencha os dados acima e aperte o botão.</p>
+    </div>
+
+    <script>
+        let res = window.document.getElementById('res')
+        function fatorial() {
+            let n = Number(window.document.getElementById('num').value)
+            res.innerHTML += `<h2>Calculando ${n}</h2>`
+            
+            if (n == 1) {
+                res.innerHTML += `<p>1 = <strong>1</strong></p>`
+            } else {
+
+                //MELHORAR
+                let fat = 1
+                for(let c = 1; c <= n; c++) {
+                    fat *= c
+                    res.innerHTML += ` ${c} x`
+                }
+                res.innerHTML += ` = <strong>${fat}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

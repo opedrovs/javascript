@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            padding: 3px;
+        }
+
+        input#botao {
+            background-color: green;
+            color: white;
+            padding: 6.8px;
+            border: 1px solid darkgreen;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Super Tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+    <p>Número:
+        <input type="number" name="num" id="num">
+        <input type="button" value="Tabuada" id="botao" onclick="tabuada()">
+    </p>
+    <div id="res">
+        <p>Preencha os dados acima e aperte o botão.</p>
+    </div>
+
+    <script>
+        let res = window.document.getElementById('res')
+        function tabuada() {
+            let n = Number(window.document.getElementById('num').value)
+            res.innerHTML = `<h2>Tabuada de ${n}</h2>`
+            for (let c = 1; c <= 10; c++) {
+                res.innerHTML += `${n} x ${c} = <strong>${n*c}</strong> <br>`
+            }
+        }
+    </script>
+</body>
+</html>

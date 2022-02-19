@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem inteligente</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            padding: 3px;
+        }
+
+        input#botao {
+            background-color: green;
+            color: white;
+            padding: 6.8px;
+            border: 1px solid darkgreen;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contagem "inteligente"</h1>
+    <p>Use qualquer valor nas caixas, simule contagens crescentes e regressivas. Use também valores negativos.</p>
+    <p>Valor final:
+        <input type="number" name="inicio" id="inicio" placeholder="Início da contagem">
+    </p>
+    <p>Valor final:
+        <input type="number" name="final" id="final" placeholder="Fim da contagem">
+    </p>
+    <p><input type="button" value="Contar" id="botao" onclick="contar()"></p>
+
+    <div class="res">
+        <p>Preencha os dados acima e aperte o botão.</p>
+    </div>
+
+    <script>
+        let res = window.document.getElementsByClassName('res')[0]
+        function contar() {
+            let i = Number(window.document.getElementById('inicio').value)
+            let f = Number(window.document.getElementById('final').value)
+            res.innerHTML += `<h2>Contando de ${i} até ${f}</h2>`
+            
+            if (i == f) {
+                // Não possível contar
+                res.innerHTML += '<p>Não é possível contar, pois os números são iguais &#x1F3C1</p>' 
+            } else if (i < f) {
+                // Contagem Crescente
+                for (let c = i; c <= f; c++) {
+                    res.innerHTML += ` ${c} &#x1F449`
+                }
+            } else if (i > f) {
+                // Contagem Regressiva
+                for (let c = i; c >= f; c--) {
+                    res.innerHTML += ` ${c} &#x1F449`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
