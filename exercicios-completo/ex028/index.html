@@ -5,29 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fatorial</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        input {
-            padding: 3px;
-        }
-
-        input#botao {
-            background-color: green;
-            color: white;
-            padding: 6.8px;
-            border: 1px solid darkgreen;
-            border-radius: 3px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="estilo/style.css">
 </head>
 <body>
     <h1>Cálculo de Fatorial</h1>
     <p>Escreva um número (entre 1 e 21) na caixa a seguir e te mostrarei o Fatorial dele.</p>
     <p>Número:
-        <input type="text" name="num" id="num" placeholder="Número:">
+        <input type="number" name="num" id="num" placeholder="Número:">
         <input type="button" value="Fatorial" id="botao" onclick="fatorial()">
     </p>
     <div id="res">
@@ -38,19 +22,26 @@
         let res = window.document.getElementById('res')
         function fatorial() {
             let n = Number(window.document.getElementById('num').value)
-            res.innerHTML += `<h2>Calculando ${n}</h2>`
             
-            if (n == 1) {
-                res.innerHTML += `<p>1 = <strong>1</strong></p>`
+            if (n < 1 || n > 21) {
+                window.alert('[ERRO] Coloque um número que não seja menor que 1 e maior que 21.')
             } else {
+                res.innerHTML += `<h2>Calculando ${n}</h2>`
+                
+                if (n == 1) {
+                    res.innerHTML += `<p>1 = <strong>1</strong></p>`
+                } else {
+                    let fat = 1
 
-                //MELHORAR
-                let fat = 1
-                for(let c = 1; c <= n; c++) {
-                    fat *= c
-                    res.innerHTML += ` ${c} x`
+                    for (let f = 1; f <= n; f++) {
+                        fat *= f
+                    }
+
+                    for (let c = n; c >= 2; c--) {
+                        res.innerHTML += `${c} x `
+                    }
+                    res.innerHTML += ` 1 = <strong>${fat.toLocaleString('pt-BR')}</strong>`
                 }
-                res.innerHTML += ` = <strong>${fat}</strong>`
             }
         }
     </script>
