@@ -5,7 +5,7 @@
     <meta http-equiv="X-AU-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <title>Analisador de Números</title>
-    <link rel="stylesheet" type="text/css" href="estilo/style.css">
+    <link rel="stylesheet" type="text/css" href="./estilo/style.css">
 </head>
 <body>
     <header>
@@ -13,11 +13,11 @@
     </header>
     <section>
         <div>
-            Número (1 e 100):
+            Número (entre 1 e 100):
             <input type="number" name="fnum" id="fnum">
             <input type="button" value="Adicionar" onclick="adicionar()">
             <br><br><select name="flista" id="flista" size="6"></select>
-            <br><input type="button" value="Finalizar">
+            <br><input type="button" value="Finalizar" onclick="finalizar()">
         </div>
         <div id="res">
             
@@ -27,6 +27,6 @@
         <p>&copy; CursoemVideo</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
