@@ -24,16 +24,6 @@
         <p>Aqui vai aparecer algo...</p>
     </div>
 
-    <script>
-        let res = window.document.getElementById('res')
-        function iniciar() {
-            let anonasc = Number(window.prompt('Em que ano você nasceu?'))
-            let data = new Date()
-            let ano = data.getFullYear()
-            let idade = ano - anonasc
-
-            res.innerHTML = `<p>Quem nasceu em ${anonasc} vai completar <strong>${idade}</strong> anos em ${ano}.</p>`
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
