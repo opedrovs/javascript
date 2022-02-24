@@ -22,18 +22,18 @@
 
     <script>
         function comprar() {
-            let produto = prompt('Que produto você está comprando?')
-            let preco = Number(prompt(`Quanto custa ${produto} que você está comprando?`))
-            let valorOferecido = Number(prompt(`Qual foi o valor você deu para pagar ${produto}?`))
-            let troco = valorOferecido - preco
+        let produto = prompt('Que produto você está comprando?')
+        let preco = Number(prompt(`Quanto custa ${produto} que você está comprando?`))
+        let valorOferecido = Number(prompt(`Qual foi o valor você deu para pagar ${produto}?`))
+        let troco = valorOferecido - preco
 
-            if (preco > valorOferecido) {
-                // Dinheiro insuficiente
-                window.alert('Sinto muito, mas você não tem dinheiro o suficiente para pagar por esse produto!')
+        if (preco > valorOferecido) {
+            // Dinheiro insuficiente
+            window.alert('Sinto muito, mas você não tem dinheiro o suficiente para pagar por esse produto!')
 
-            } else if (preco <= valorOferecido) {
-                
-                // Dinheiro suficiente
+        } else if (preco <= valorOferecido) {
+            
+            // Dinheiro suficiente
                 window.alert(`Você comprou ${produto} que custou ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.
 Deu ${valorOferecido.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de troco.
 Volte Sempre!`)
