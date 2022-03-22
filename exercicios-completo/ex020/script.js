@@ -10,7 +10,7 @@ function estacao() {
     } else if (mes == 'Abril' || mes == 'Maio' || mes == 'Junho') {
         estacaoAno = 'PRIMAVERA'
     } else if (mes == 'Julho' || mes == 'Agosto' || mes == 'Setembro') {
-        estacaoAno = 'Verão'
+        estacaoAno = 'VERÃO'
     } else if (mes == 'Outubro' || mes == 'Novembro' || mes == 'Dezembro') {
         estacaoAno = 'OUTONO'
     } else {
@@ -20,7 +20,6 @@ function estacao() {
     res.innerHTML = `<p>No mês de <span class="destaque">${mes}</span>, estamos na estação <span class="destaque"><strong>${estacaoAno}</strong></span>.</p>`
 
     /*
-
     Código LONGO e DESORGANIZADO
 
     if (mes == 'Janeiro') {
