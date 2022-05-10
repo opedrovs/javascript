@@ -1,0 +1,9 @@
+let num = prompt('Digite um número:')
+num = Number(num)
+document.body.innerHTML = `<h1>Seu número é ${num}</h1>`
+document.body.innerHTML += `<p>Raiz quadrada: ${(num ** (1/2))}</p>`
+document.body.innerHTML += `<p>${num} é inteiro: ${Number.isInteger(num)}</p>`
+document.body.innerHTML += `<p>É NaN: ${Number.isNaN(num)}</p>`
+document.body.innerHTML += `<p>Arredondando para baixo: ${Math.floor(num)}</p>`
+document.body.innerHTML += `<p>Arredondando para cima: ${Math.ceil(num)}</p>`
+document.body.innerHTML += `<p>Com duas casas decimais: ${num.toFixed(2)}</p>`
