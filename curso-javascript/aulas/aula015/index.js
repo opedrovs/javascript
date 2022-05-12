@@ -16,4 +16,3 @@ console.log(!!(100 / 0)) // Verifica se a conta está correta
 // valor máximo 10, valor mínimo 5, então ele vai gerar números aleatórios entre 5 e 10, e o Math.round para arredondar os valores
 // console.log(aleatorio);
 // console.log(Math.PI); // Descobrir o valor de PI
-
