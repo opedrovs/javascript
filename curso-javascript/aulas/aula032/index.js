@@ -5,6 +5,17 @@ let a = 'A'; // B
 let b = 'B'; // C
 let c = 'C'; // A
 
+// Reatribuindo os valores
+[a, b, c] = ['B', 'C', 'A'];
+
+console.log(a, b, c);
+*/
+
+/*
+let a = 'A'; // B
+let b = 'B'; // C
+let c = 'C'; // A
+
 const letras = [b, c, a];
 [a, b, c] = letras;
 
@@ -17,6 +28,14 @@ const numeros = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000];
 const [um, dois, tres, ...resto] = numeros;
 console.log(um, dois, tres);
 console.log(resto);
+*/
+
+/*
+// PIOR FORMA
+const numeros = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000];
+const primeiroNumero = numeros[0];
+const segundoNumero = numeros[1];
+console.log(primeiroNumero, segundoNumero);
 */
 
 /*
@@ -42,8 +61,10 @@ const [,[,,seis]] = numeros;
 console.log(seis);
 */
 
+/*
 //                    0          1         2
 //                 0  1  2    0  1  2    0  1  2   
 const numeros = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ];
 const [lista1, lista2, lista3] = numeros;
 console.log(lista3[2]);
+*/
