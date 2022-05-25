@@ -1,3 +1,5 @@
+// Método slice
+
 // Função que faz pop, push, shift, unshift e mais um pouco, e ela mexe no array original
 
 //               -5       -4       -3         -2        -1
