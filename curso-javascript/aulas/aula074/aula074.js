@@ -1,3 +1,5 @@
+// Prototypes
+
 // Construtora -> molde (classe)
 function Pessoa(nome, sobrenome) {
     this.nome = nome;
