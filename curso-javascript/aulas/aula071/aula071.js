@@ -5,6 +5,7 @@
 // Sobre congelar um objeto para não poder alterar nada, quando fazia um freeze, mas imagine que queremos fazer em apenas 1 ou 2 objetos, e não em todas
 
 // defineProperty
+
 /*
 function Produto(nome, preco, estoque) {
     this.nome = nome;
@@ -50,7 +51,6 @@ for (let chave in p1) {
 
 // defineProperties
 
-
 function Produto(nome, preco, estoque) {
     Object.defineProperty(this, 'estoque', {
         enumerable: true, // mostra a chave
@@ -81,4 +81,3 @@ console.log(p1);
 for (let chave in p1) {
     console.log(chave);
 }
-

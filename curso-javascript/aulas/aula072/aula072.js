@@ -25,10 +25,10 @@ function Produto(nome, preco, estoque) {
     });
 }
 
-// const p1 = new Produto('Camiseta', 20, 3);
-// console.log(p1);
-// p1.estoque = 'fdfid';
-// console.log(p1.estoque);
+const p1 = new Produto('Camiseta', 20, 3);
+console.log(p1);
+p1.estoque = 20;
+console.log(p1.estoque);
 
 // Trabalhando com getter e setter com função factory
 // Nós podemos fazer direto no objeto
@@ -44,6 +44,6 @@ function criaProduto(nome) {
     };
 }
 
-const p2 = criaProduto('Camiseta');
-p2.nome = 'Qualquer coisa.';
-console.log(p2.nome);
+// const p2 = criaProduto('Camiseta');
+// p2.nome = 'Qualquer coisa.';
+// console.log(p2.nome);
