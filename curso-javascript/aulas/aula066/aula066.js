@@ -30,7 +30,7 @@ const nomes = pessoas.map(obj => {
 // console.log(nomes);
 
 /*const idades = pessoas.map(obj => {
-    // delete obj.nome;
+    // delete obj.nome; // Modifica o objeto original
     return { idade: obj.idade }; 
 });*/
 
