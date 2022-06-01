@@ -42,7 +42,7 @@ function Caneca(nome, preco, material, estoque) {
 
             estoque = valor;
         }
-    })
+    });
 }
 
 Caneca.prototype = Object.create(Produto.prototype);
