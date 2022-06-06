@@ -1,0 +1,1 @@
+// Métodos de instância e estáticos
