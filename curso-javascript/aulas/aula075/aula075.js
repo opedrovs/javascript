@@ -25,6 +25,8 @@ Object.setPrototypeOf(objC, objB);
 console.log(objC.chaveC);
 */
 
+// Object.getPrototypeOf(objA)
+
 function Produto(nome, preco) {
     this.nome = nome;
     this.preco = preco;
@@ -52,6 +54,9 @@ p2.aumento(15);
 // console.log(p1);
 // console.log(p2);
 
+// const p3 = Object.create(Object.prototype); // Object.create pode receber o objeto literal (Object.prototype), eu tenho um objeto normal
+// console.log(p3);
+
 // Nós podemos criar um objeto e já setar o prototype dele de cara
 
 // const p3 = Object.create(Produto.prototype);
@@ -61,6 +66,7 @@ p2.aumento(15);
 
 const p3 = Object.create(Produto.prototype, {
     // Criando objeto, setando prototype (o pai do objeto que estamos criando), as chaves e seus configurações
+    // Essas chaves é opcional
     preco: {
         writable: true,
         configurable: true,
@@ -76,3 +82,4 @@ const p3 = Object.create(Produto.prototype, {
 });
 p3.aumento(10);
 console.log(p3);
+
