@@ -58,7 +58,7 @@ cc.depositar(10);
 cc.sacar(110);
 cc.sacar(1);
 
-function CP(agencia, conta, saldo) { // CC = Conta Poupança
+function CP(agencia, conta, saldo) { // CP = Conta Poupança
     Conta.call(this, agencia, conta, saldo);
 }
 

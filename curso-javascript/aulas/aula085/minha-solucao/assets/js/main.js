@@ -1,11 +1,4 @@
 // Minha solução
-const nome = document.querySelector('#nome');
-const sobrenome = document.querySelector('#sobrenome');
-const cpf = document.querySelector('#cpf');
-const usuario = document.querySelector('#usuario');
-const senha = document.querySelector('#senha');
-const repeatSenha = document.querySelector('#repeat-senha');
-
 class ValidaFormulario {
     constructor(nome, sobrenome, cpf, usuario, senha, repeatSenha) {
         this.nome = nome;
@@ -125,6 +118,13 @@ document.addEventListener('click', e => {
     const el = e.target;
 
     if(el.classList.contains('enviar')) {
+        const nome = document.querySelector('#nome');
+        const sobrenome = document.querySelector('#sobrenome');
+        const cpf = document.querySelector('#cpf');
+        const usuario = document.querySelector('#usuario');
+        const senha = document.querySelector('#senha');
+        const repeatSenha = document.querySelector('#repeat-senha');
+        
         new ValidaFormulario(nome, sobrenome, cpf, usuario, senha, repeatSenha);
     }
 });
