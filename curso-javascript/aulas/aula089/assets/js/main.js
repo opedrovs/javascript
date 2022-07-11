@@ -1,6 +1,6 @@
 // Requisição AJAX com JS
 
-// XMLHttpRequest - POde fazer aquisição de qualquer tipo de dado, XML, HTML...
+// XMLHttpRequest - POde fazer aquisição de qualquer tipo de dado, XML, HTML... E não funciona utilizando o modo file, por isso, usaremos o LiveServer
 
 // MODO ANTIGO
 /*
