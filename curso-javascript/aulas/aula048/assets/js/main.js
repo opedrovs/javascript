@@ -64,7 +64,7 @@ function salvarTarefas() {
     }
 
     const tarefasJSON = JSON.stringify(listaDeTarefas); // JSON.stringify - converte elemento JavaScript para uma string no formato JSON
-    localStorage.setItem('tarefas', tarefasJSON) // Esse é um local no navegador onde pode salvar coisas, como se fosse uma mini base de dados que está no navegador, e só pode salvar strings.
+    localStorage.setItem('tarefas', tarefasJSON); // Esse é um local no navegador onde pode salvar coisas, como se fosse uma mini base de dados que está no navegador, e só pode salvar strings.
 
     // localStorage.setItem('tarefas', tarefasJSON) - 'tarefas' é o nome que você vai usar para recuperar esse valor de novo, e o valor disso é o tarefasJSON.
 }
