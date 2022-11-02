@@ -1,6 +1,6 @@
 import GeraCPF from './modules/GeraCPF';
 
-import './assets/css/style.css';
+import './assets/css/style.css'; // Estamos importando os estilos css
 
 (function() {
     const gera = new GeraCPF();
