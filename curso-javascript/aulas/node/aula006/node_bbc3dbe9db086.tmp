@@ -1,0 +1,19 @@
+const express = require('express');
+const app = express();
+
+//         Criar   ler   atualizar  apagar
+// CRUD -> CREATE, READ, UPDATE,    DELETE
+//         POST    GET   PUT        DELETE
+
+// Express ajuda a trabalhar nas rotas da aplicação, após a barra "/" (caminho), ele quem cuida o que deve aparecer na página
+
+// http://meusite.com/ <- GET -> Entregue a página /
+// http://meusite.com/sobre <- GET -> Entregue a página /sobre
+// http://meusite.com/contato <- GET -> Entregue a página /contato
+
+app.get('/', (req, res) => {
+    res.send('Hello world!');
+}); // primeiro parâmetro, a rota (usamos a rota principal), o segundo parâmetro, uma função com dois parâmetros (requisição e resposta)
+// Requisição ao que estou pedindo e resposta é o que eu vou mandar para o servidor
+
+app.listen(3000); // Uma porta é referente a um processo que está sendo executado no seu servidor, significa que se houver alguma coisa rodando em determinada porta do seu servidor e você tentar iniciar o express nessa porta, vai dar erro. Por isso utilizamos portas não muitos utilizadas, como 3000
