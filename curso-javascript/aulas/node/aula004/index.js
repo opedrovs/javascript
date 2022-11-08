@@ -5,6 +5,10 @@ const path = require('path');
 //     .then(files => console.log(files))
 //     .catch(e => console.log(e));
 
+// fs.readdir(__dirname)
+//     .then(files => console.log(files))
+//     .catch(e => console.log(e));
+
 async function readdir(rootDir) {
     rootDir = rootDir || path.resolve(__dirname);
     const files = await fs.readdir(rootDir);

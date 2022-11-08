@@ -22,6 +22,5 @@ function gera() {
         chkNumeros.checked,
         chkSimbolos.checked
     );
-
     return senha || 'Nada selecionado';
 }
