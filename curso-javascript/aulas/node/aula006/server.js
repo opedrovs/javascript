@@ -13,6 +13,9 @@ const app = express();
 // http://meusite.com/sobre <- GET -> Entregue a página /sobre
 // http://meusite.com/contato <- GET -> Entregue a página /contato
 
+// req -> request
+// res -> response
+
 // primeiro parâmetro, a rota (usamos a rota principal), o segundo parâmetro, uma função com dois parâmetros (requisição e resposta)
 // Requisição ao que estou pedindo e resposta é o que eu vou mandar para o servidor
 app.get('/', (req, res) => {
