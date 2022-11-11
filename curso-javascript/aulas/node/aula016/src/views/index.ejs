@@ -1,19 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!-- includes -> Imagina o head, essa parte geralmente não vai ser modificada para todos os códigos, eu posso pegar esses trechos de códigos e separar em arquivos menores, e incluir em todas as outras páginas: Contato, Login, Sobre, várias páginas e precisaria copiar para todas elas. 
+Então poderiamos pegar o head, porque ele não vai mudar, o title normalmente muda, mas poderiamos incluir uma variável lá no locals, ou então enviar um título para todas as páginas -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
-</head>
-
-<body>
+<%- include('includes/head') %> <!-- colocamos a palavra include, e incluimos o arquivo dentro de includes, chamado head -->
 
     <section class="container">
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at iure dignissimos aliquam harum nulla fugit
-        perferendis in, ipsum vel repellat quis deleniti distinctio eius voluptatem assumenda ratione, doloribus aliquid!</p>
+        <h1>
+
+            <!-- 
+            O que muda entre = e - ?
+
+             "=" -> escapa caracteres para mim, ele é mais seguro de utilizar para não quebrar tamplate caso tenha algumas tags dentro do conteúdo
+            
+            "-" -> Eu utilizo quando eu sei que o conteúdo vindo dele precisa ser HTML, ele não escapa os caracteres, como por exemplo, eu tiver um span com estilo nele, será aplicado
+            -->
+
+            <!-- Podemos controlar o fluxo, - e = para exibir/executar o que você mandar, e sem sinal nenhum para controlar o fluxo, como for, if, que não exibem nada na tela, mas controla o fluxo -->
+
+            <!-- utilize # após % para comentar-->
+
+            <%# numeros.forEach(num => { %>
+                <%#= num %><!-- <br> -->
+            <%# }); %>
+
+            <%# for(let i = 0; i < numeros.length; i++) { %>
+                <%#= numeros[i] %><!-- <br> -->
+            <%# }; %>
+            
+            <%= umaVariavelLocal %>
+        </h1>
 
         <form action="/" method="post">
             <label>Cliente</label>
@@ -22,7 +36,4 @@
         </form>
     </section>
 
-    <script src="./assets/js/bundle.js"></script>
-</body>
-
-</html>
+<%- include('includes/footer') %>
