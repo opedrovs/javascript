@@ -7,9 +7,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
+// process.env.CONNCECTIONSTRING é o que contém o link com nossos dados, usuário e senha, para evitar a exposição, usamos o dotenv
+
 mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        console.log('Conectei à base de dados.')
         app.emit('pronto'); // Aqui emitimos um sinal, emitimos aqui o sinal "pronto", e daí, podemos capturar esse evento para carregar o banco de dados (enquanto a conexão com base de dados não realizar, não conectaremos ao site)
     })
     .catch(e => console.log(e)); // Aqui, poderiamos renderizar, criar uma rota, uma página/tela de erro para o cliente
@@ -36,4 +37,4 @@ app.on('pronto', () => { // Capturamos o evento do emit
         console.log('Acessar http://localhost:3500');
         console.log('Servidor executando na porta 3500');
     }); // Só conectaremos se app.emit() retornar "pronto"
-})
+});
