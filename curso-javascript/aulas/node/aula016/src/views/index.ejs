@@ -5,19 +5,6 @@ Então poderiamos pegar o head, porque ele não vai mudar, o title normalmente m
 
     <section class="container">
         <h1>
-
-            <!-- 
-            O que muda entre = e - ?
-
-             "=" -> escapa caracteres para mim, ele é mais seguro de utilizar para não quebrar tamplate caso tenha algumas tags dentro do conteúdo
-            
-            "-" -> Eu utilizo quando eu sei que o conteúdo vindo dele precisa ser HTML, ele não escapa os caracteres, como por exemplo, eu tiver um span com estilo nele, será aplicado
-            -->
-
-            <!-- Podemos controlar o fluxo, - e = para exibir/executar o que você mandar, e sem sinal nenhum para controlar o fluxo, como for, if, que não exibem nada na tela, mas controla o fluxo -->
-
-            <!-- utilize # após % para comentar-->
-
             <%# numeros.forEach(num => { %>
                 <%#= num %><!-- <br> -->
             <%# }); %>
