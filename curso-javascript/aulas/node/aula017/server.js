@@ -1,7 +1,3 @@
-// Helmet e CSRF
-
-// Para mais seguranças em nosso site contra CSRF/XSRF
-
 require('dotenv').config();
 const express = require('express');
 const app = express();
@@ -22,6 +18,7 @@ const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/midd
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({

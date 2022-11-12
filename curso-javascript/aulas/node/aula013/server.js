@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const routes = require('./routes');
 const path = require('path');
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const { middlewareGlobal } = require('./src/middlewares/middleware'); // Middlewares são funções que são executadas na rota (uma cadeia de coisas que são executadas)
 
 app.use(express.urlencoded({ extended: true }));
 
