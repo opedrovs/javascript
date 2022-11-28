@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator'); // Estamos usando isso para validar nosso e-mail, poderiamos ter usado expressões regulares se quisermos
+const bcryptjs = require('bcryptjs'); // Salvar senhas como hash
 
 const LoginSchema = new mongoose.Schema({ 
     email: { type: String, required: true },
@@ -15,14 +16,41 @@ class Login { // Validação completa na classe
         this.user = null;
     }
 
+    async login() {
+        this.valida();
+        if(this.errors.length > 0) return;
+        this.user = await LoginModel.findOne({ email: this.body.email });
+
+        if(!this.user) {
+            this.errors.push('Usuário não existe.');
+            return;
+        }
+
+        if(!bcryptjs.compareSync(this.body.password, this.user.password)) { // Comparando a nossa senha com a senha hash do banco de dados
+            this.errors.push('Senha inválida');
+            this.user = null;
+            return;
+        }
+    }
+
     async register() { // Utilizamos async await para esperar usuário ser criado 
         this.valida();
         if(this.errors.length > 0) return;
-        try {
-            this.user = await LoginModel.create(this.body); // Aqui criamos o usuário. Se usuário for criado, podemos acessar ele de fora
-        } catch(e) {
-            console.log(e);
-        }
+        
+        await this.userExists(); // Verificar se já existe e-mail cadastrado
+
+        if(this.errors.length > 0) return;
+
+        const salt = bcryptjs.genSaltSync();
+        this.body.password = bcryptjs.hashSync(this.body.password, salt); // Estamos gerando um salt, fazendo hash na senha, baseado no valor da senha, se baseando no salt que ele criou
+
+        this.user = await LoginModel.create(this.body); // Aqui criamos o usuário. Se usuário for criado, podemos acessar ele de fora
+        
+    }
+
+    async userExists() {
+        this.user = await LoginModel.findOne({ email: this.body.email }); // Aqui estou encontrando um registro na base de dados, que tenha o email que seja igual ao email que estou enviando
+        if(this.user) this.errors.push('Usuário já existe.');
     }
 
     valida() {
