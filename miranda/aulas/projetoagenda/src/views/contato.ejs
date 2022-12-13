@@ -13,9 +13,9 @@
 
             <!-- Para evitar com que criamos vários usuários com o mesmo perfil -->
             <% if(contato._id) { %>
-            <form action="/contato/edit/<%= contato._id %>" method="POST">
+            <form class="form-cadastro" action="/contato/edit/<%= contato._id %>" method="POST">
             <% } else { %>
-            <form action="/contato/register" method="POST">
+            <form class="form-login" action="/contato/register" method="POST">
             <% } %>
                 <input type="hidden" name="_csrf" value=<%= csrfToken %>>
                 <div class="mb-3">
@@ -37,7 +37,7 @@
                 
                 
                 <button type="submit" class="btn btn-primary">Salvar</button>
-              </form>
+            </form>
         </div>
         
         <div class="col-lg-2"></div>

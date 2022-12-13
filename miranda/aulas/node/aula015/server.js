@@ -27,9 +27,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-const sessionOptions = session({
+const sessionOptions = session({ // Aqui é onde criamos nossa sessão (cookie)
     secret: 'secret',
-    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }), // vamos mandar o cliente de conexão do mongodb
+    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }), // vamos mandar o cliente de conexão do mongoDB
     resave: false,
     saveUninitialized: false,
     cookie: { // 1000 milésimos * 60 segundos * 60 minutos * 24 horas * 7 dias

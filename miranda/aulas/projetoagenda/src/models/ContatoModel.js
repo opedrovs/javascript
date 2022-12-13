@@ -19,12 +19,6 @@ function Contato(body) {
     this.contato = null;
 }
 
-Contato.buscaPorId = async function(id) { // A função não está atrelada ao prototype, então não preciso instanciar para poder usar a função, seria uma função ESTÁTICA
-    if(typeof id !== 'string') return;
-    const user = await ContatoModel.findById(id); // Isso vai me retornar usuário ou vai retornar null
-    return user;
-}
-
 Contato.prototype.register = async function() {
     this.valida();
     if(this.errors.length > 0) return;
@@ -63,6 +57,27 @@ Contato.prototype.edit = async function(id) {
     this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, { new: true }); // { new: true } - quando atualizar os contatos, me envia os dados atualizados
     
     // findByIdAndUpdate - Encontre o contato por id, e atualize os seus dados
+};
+
+// Métodos estáticos
+
+Contato.buscaPorId = async function(id) { // A função não está atrelada ao prototype, então não preciso instanciar para poder usar a função, seria uma função ESTÁTICA
+    if(typeof id !== 'string') return;
+    const contato = await ContatoModel.findById(id); // Isso vai me retornar usuário ou vai retornar null
+    return contato;
+};
+
+Contato.buscaContatos = async function() {
+    const contatos = await ContatoModel.find()
+        .sort({ criadoEm: -1 }); // Isso exibirá dados criados anteriormente primeiro (por isso do -1, que mostra de trás para frente) 
+    return contatos;
+};
+
+Contato.delete = async function(id) {
+    if(typeof id !== 'string') return;
+    const contato = await ContatoModel.findOneAndDelete({id: _id}); // Ele irá receber um objeto de filtro
+    // const contato = await ContatoModel.findByIdAndDelete(id);
+    return contato;
 };
 
 module.exports = Contato;

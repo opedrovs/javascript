@@ -33,4 +33,4 @@ async function walk(files, rootDir) {
     }
 }
 
-readdir('/home/pedrovsky/Documentos/estudos/javascript/curso-javascript/aulas/');
+readdir('/home/pedrovsky/Documentos/estudos/javascript/miranda/aulas/');
