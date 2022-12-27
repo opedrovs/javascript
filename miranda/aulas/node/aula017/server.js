@@ -1,3 +1,5 @@
+// Adicionando segurança em nossos formulários contra csrf, utilizando csurf e helmet
+
 require('dotenv').config();
 const express = require('express');
 const app = express();
