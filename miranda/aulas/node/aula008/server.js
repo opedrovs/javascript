@@ -29,7 +29,7 @@ app.post('/', (req, res) => { // Quando envia um formulário, ele vem dentro da 
     res.send(`O que você me enviou foi: ${req.body.nome}`); // A chave nome, vem do name do formulário
 });
 
-app.listen(3500, () => {
-    console.log('Acessar http://localhost:3500');
-    console.log('Servidor executando na porta 3500');
+app.listen(3000, () => {
+    console.log('Acessar http://localhost:3000');
+    console.log('Servidor executando na porta 3000');
 });

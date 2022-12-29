@@ -7,7 +7,7 @@ const routes = require('./routes');
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-app.listen(3500, () => {
-    console.log('Acessar http://localhost:3500');
-    console.log('Servidor executando na porta 3500');
+app.listen(3000, () => {
+    console.log('Acessar http://localhost:3000');
+    console.log('Servidor executando na porta 3000');
 });

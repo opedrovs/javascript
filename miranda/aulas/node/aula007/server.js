@@ -33,7 +33,7 @@ app.get('/contato', (req, res) => {
     res.send('Obrigado por entrar em contato com a gente.');
 });
 
-app.listen(3500, () => {
-    console.log('Acessar http://localhost:3500');
-    console.log('Servidor executando na porta 3500');
+app.listen(3000, () => {
+    console.log('Acessar http://localhost:3000');
+    console.log('Servidor executando na porta 3000');
 }); // Uma porta é referente a um processo que está sendo executado no seu servidor, significa que se houver alguma coisa rodando em determinada porta do seu servidor e você tentar iniciar o express nessa porta, vai dar erro. Por isso utilizamos portas não muitos utilizadas, como 3000
