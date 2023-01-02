@@ -1,0 +1,7 @@
+OBS: bdmariadb1 é o nome do nosso banco de dados
+
+sudo docker ps -> Ver se o servidor foi iniciado
+sudo docker stop bdmariadb1 -> Vai parar o servidor
+sudo docker start bdmariadb1 -> Vai iniciar o servidor
+sudo docker restart bdmariadb1 -> Vai parar e depois iniciar o servidor
+sudo docker rm bdmariadb1 -> Vai remover o servidor (É necessário parar ele antes)
