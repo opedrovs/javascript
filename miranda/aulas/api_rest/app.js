@@ -1,7 +1,21 @@
-const teste = 22;
-console.log(teste);
+import express from 'express';
+import homeRoutes from './src/routes/homeRoutes';
 
-// Assim, podemos desativar o erro via comentário
-// console.log(teste); // eslint-disable-line
-// eslint-disable-next-line
-// console.log(teste);
+class App {
+  constructor() {
+    this.app = express();
+    this.middlewares();
+    this.routes();
+  }
+
+  middlewares() {
+    this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(express.json());
+  }
+
+  routes() {
+    this.app.use('/', homeRoutes);
+  }
+}
+
+export default new App().app;
