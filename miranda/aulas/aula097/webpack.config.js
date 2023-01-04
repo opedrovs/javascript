@@ -1,6 +1,5 @@
 const path = require('path');   // CommonJS
 
-
 // Importar módulo
 module.exports = {
     mode: 'production',
